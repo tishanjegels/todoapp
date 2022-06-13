@@ -1,4 +1,4 @@
-/*------------------ Body -------------*/
+/*------------------ Body -------------
 
 body{
     padding: 0;
@@ -8,21 +8,75 @@ body{
 
 }
 
-/*------------------ Container -------------*/
+/*------------------ Container -------------
 
 .container{
-    padding:0 ;
+    padding:10px ;
+    margin: 5px;
+    border: 5px solid black;
 }
 
-/*------------------ Header -------------*/
+/*------------------ Header -------------
 
 .header{
-    width: 0;
-
+    width: 600px ;
+    height: 150px;
+    border: 5px dotted red;
 }
 
-/*------------------ Content -------------*/
+/*------------------ Content -------------
 
 .content{
-    width: 0;
+    width: 50px;
+    height: 300px;
 }
+
+/*------------------ List -------------
+
+#list{
+    border: 5px solid blue;
+    width: fit-content;
+}
+
+/*------------------ Add item -------------
+
+.add-item {
+    width: max-content;
+    height: 50px;
+
+}*/
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'OldStandardTT' , sans-serif;
+    background-color: rgb(119, 157, 157);
+}
+
+section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+h3{
+    color: darkslateblue;
+    font-size: 22px;
+    font-weight: 350;
+    margin-bottom: 0.5rem;
+}
+
+h4{
+    color: red;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.greeting .title {
+    display: flex;
+}
+

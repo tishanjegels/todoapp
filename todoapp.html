@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css\todoapp.css">
     <link rel="stylesheet" href="">
-    <!--font-->
+    font
 
 </head>
 
@@ -22,12 +22,12 @@
             </div>
 
             <div id="date">
-                <!--todays date .. if uu want to add ...-->
+                
             </div>
 
-        </div><!--header closing div-->
+        </div><!-header closing div
 
-        <div class="content">
+<div class="content">
 
             <ul id="list">
 
@@ -38,16 +38,16 @@
                 </li>
 
             </ul>
-            <div class="add item">
+            <div class="add-item">
 
                 <i class="fa fa-plus-circle"></i>
                 <input type="text" id="input" placeholder="Add a To-Do">
 
-            </div><!--add item closing div-->
+            </div><!-add item closing div
 
-        </div><!--content closing div-->
+        </div><!-content closing div
 
-    </div><!--container closing div-->
+    </div><!-container closing div
 
 
 
@@ -56,4 +56,94 @@
     </script>
 </body>
 
-</html>
+</html>-->
+
+
+<!--Using Form To Do App-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+
+    <link rel="stylesheet" href="css\todoapp.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="greeting">
+
+            <h2 class="title ">
+                What To Do Today?
+            </h2>
+
+        </section>
+
+        <section class="create-todo">
+
+            <h3>Create a To Do</h3>
+
+            <form id="todo-form">
+
+                <h4>What's on Today's To Do?</h4>
+                <input type="text" name="content" id="content" placeholder="e.g. Make supper" />
+
+                <h4>Pick a category</h4>
+                <div class="options">
+
+                    <label>
+                        <input type="radio" name="category" id="category1" value="work" />
+                        <span class="bubble work"></span>
+                        <div>Work</div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="category" id="category2" value="personal" />
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+
+                </div>
+
+                <input type="submit" value="Add To-Do" />
+
+            </form>
+
+        </section>
+
+        <section class="todo-list">
+
+            <h3>To Do List</h3>
+            <div class="list" id="todolist">
+
+                <div class="todo-item">
+
+                    <label>
+                        <i class="fa fa-cicle-thin complete"></i>
+                        <i class="fas fa-trash delete"></i>
+                        <i class="fas fa-edit edit"></i>
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js\todoapp.js">
+
+    </script>
+</body>
