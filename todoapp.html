@@ -8,10 +8,46 @@
     <title>To Do App</title>
 
     <link rel="stylesheet" href="css\todoapp.css">
+    <link rel="stylesheet" href="">
+    <!--font-->
+
 </head>
 
 <body>
+    <div class="container">
+        <div class="header">
 
+            <div class="clear">
+                <i class="fa fa-refresh"></i>
+            </div>
+
+            <div id="date">
+                <!--todays date .. if uu want to add ...-->
+            </div>
+
+        </div><!--header closing div-->
+
+        <div class="content">
+
+            <ul id="list">
+
+                <li class="item">
+                    <i class="fa fa-circle-thin complete"></i>
+                    <p class="text">Drink Coffe</p>
+                    <i class="fa fa-trash-o delete"></i>
+                </li>
+
+            </ul>
+            <div class="add item">
+
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="Add a To-Do">
+
+            </div><!--add item closing div-->
+
+        </div><!--content closing div-->
+
+    </div><!--container closing div-->
 
 
 
