@@ -1,58 +1,9 @@
-/*------------------ Body -------------
-
-body{
-    padding: 0;
-    margin:0 ;
-    background-color: grey ;
-    font-family: Arial, Helvetica, sans-serif ;
-
-}
-
-/*------------------ Container -------------
-
-.container{
-    padding:10px ;
-    margin: 5px;
-    border: 5px solid black;
-}
-
-/*------------------ Header -------------
-
-.header{
-    width: 600px ;
-    height: 150px;
-    border: 5px dotted red;
-}
-
-/*------------------ Content -------------
-
-.content{
-    width: 50px;
-    height: 300px;
-}
-
-/*------------------ List -------------
-
-#list{
-    border: 5px solid blue;
-    width: fit-content;
-}
-
-/*------------------ Add item -------------
-
-.add-item {
-    width: max-content;
-    height: 50px;
-
-}*/
-
 
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'OldStandardTT' , sans-serif;
-    background-color: rgb(119, 157, 157);
 }
 
 section{
@@ -60,23 +11,181 @@ section{
     margin-bottom: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    /*background-image: url(images/background-2.png);*/
 }
 
 h3{
     color: darkslateblue;
-    font-size: 22px;
-    font-weight: 350;
+    font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
 h4{
     color: red;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 0.875rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .greeting .title {
     display: flex;
 }
+
+/* create to do input*/
+
+#content {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem ;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* option */
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#option-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: rgb(208, 233, 255);
+    border-radius:0.5rem ;
+    cursor: pointer;
+}
+
+input[type="radio"],input[type="checkbox"] {
+    display: none;
+}
+
+.bubble-work{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 125, 125);
+}
+
+.bubble-personal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(6, 50, 77);
+}
+ 
+.bubble-work::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: rgb(123, 21, 38);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.bubble-personal::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: rgb(0, 5, 7);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;   
+}
+
+input:checked ~ .bubble-work::after {
+    width:10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.create-todo input[type=submit] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: rgb(0, 0, 0);
+    background-color: antiquewhite;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.create-todo input[type="submit"]:hover {
+    opacity: 0.75;
+}
+
+.todo-list .list {
+    margin: 1rem 0;
+}
+
+.todo-list .todo-item{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.todo-item label {
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.todo-item .todo-content {
+    flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+    color: grey;
+    font-size: 1.125rem;
+}
+
+.todo-item .actions{
+    display: flex;
+    align-items: center;
+}
+
+.todo-item .actions button {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25 rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+    opacity: 0.75;
+}
+
+.todo-item .actions .edit {
+    margin-right: 0.5rem;
+    background-color: cadetblue;
+}
+
+.todo-item .actions .delete {
+    background-color: maroon;
+}
+
+
+
 
