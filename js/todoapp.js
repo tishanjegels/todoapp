@@ -46,7 +46,7 @@ function DisplayTodos() {
         if (todo.category == 'personal') {
             span.classList.add('personal');
         } else {
-            span.classList.add('business');
+            span.classList.add('work');
         }
 
         content.classList.add('todo-content');
@@ -105,4 +105,3 @@ function DisplayTodos() {
     })
 }
 
-//still have to add due date

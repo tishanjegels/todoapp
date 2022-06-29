@@ -1,30 +1,34 @@
 body{
-    margin: 0;
-    padding: 0;
+    margin: 5rem;
     box-sizing: border-box;
     font-family: 'OldStandardTT' , sans-serif;
-    background-image:url(https://unsplash.com/photos/yQorCngxzwI);
+    background-image: linear-gradient(to right, lightskyblue,lightcoral,lightpink )
 }
 
 section{
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: rem;
+    padding-right: 7rem;
+    background-color: light;
+}
+
+h2{
+    font-family: "Baguet Script"; 
 }
 
 h3{
-    color: darkslateblue;
+    font-family: "Bodoni MT";
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 h4{
-    color: red;
+    font-family: "Baguet Script";
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .greeting .title {
@@ -40,6 +44,11 @@ h4{
     padding: 1rem 1.5rem ;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
+
+}
+
+#due-date{
+    border-radius: 6px;
 }
 
 /* option */
