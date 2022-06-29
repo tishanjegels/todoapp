@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     const newTodoForm = document.querySelector('#new-todo-form');
 
     newTodoForm.addEventListener('submit', e => {
-        e.preventDefault();
+        //e.preventDefault();
 
         const todo = {
             content: e.target.elements.content.value,
@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
     })
 })
 
-function DisplayTodos () {
+function DisplayTodos() {
     const todoList = document.querySelector('#todo-list');
 
     todoList.innerHTML = '';
@@ -43,7 +43,7 @@ function DisplayTodos () {
         input.checked = todo.done;
         span.classList.add('bubble');
 
-        if(todo.category == 'personal') {
+        if (todo.category == 'personal') {
             span.classList.add('personal');
         } else {
             span.classList.add('business');
@@ -69,10 +69,10 @@ function DisplayTodos () {
         todoList.append(todoItem);
 
         if (todo.done) {
-            todoItem.classList.add('done').;
+            todoItem.classList.add('done');
         }
 
-        input.addEventListener('click' , e => {
+        input.addEventListener('click', e => {
             todo.done = e.target.checked;
             localStorage.setitem('todos', JSON.stringify(todo));
 
@@ -84,6 +84,23 @@ function DisplayTodos () {
 
             DisplayTodos();
         })
-            edit.addEventListener('click')
+
+        edit.addEventListener('click', e => {
+            const input = content.querySelector('input');
+            input.removeAttribute('readonly');
+            input.focus();
+            input.addEventListener('blur', e => {
+                input.setAttribute('readonly', true);
+                todo.conteny = e.target.value;
+                localStorage.setItem('todos', JSON.stringify(todos));
+                DisplayTodos();
+            })
+        })
+
+        deleteButton.addEventListener('click', e => {
+            todos = todos.filter(t => t != todo);
+            localStorage.setItem('todos', JSON.stringify(todos));
+            DisplayTodos();
+        })
     })
 }
