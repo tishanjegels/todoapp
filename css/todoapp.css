@@ -3,6 +3,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'OldStandardTT' , sans-serif;
+    background-image:url(https://unsplash.com/photos/yQorCngxzwI);
 }
 
 section{
@@ -10,7 +11,6 @@ section{
     margin-bottom: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    /*background-image: url(images/background-2.png);*/
 }
 
 h3{
