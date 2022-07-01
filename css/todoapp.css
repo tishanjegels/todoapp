@@ -1,54 +1,52 @@
 body{
-    margin: 5rem;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'OldStandardTT' , sans-serif;
-    background-image: linear-gradient(to right, lightskyblue,lightcoral,lightpink )
+    text-align: center;
+    background-image: linear-gradient(to right, lightskyblue,lightcoral,lightpink );
+
 }
 
 section{
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    padding-left: rem;
-    padding-right: 7rem;
-    background-color: light;
-}
-
-h2{
-    font-family: "Baguet Script"; 
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 h3{
     font-family: "Bodoni MT";
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+    font-size:2rem ;
+    font-weight: 600;
+    text-align: center;
 }
 
 h4{
     font-family: "Baguet Script";
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin-bottom: 1rem;
-}
-
-.greeting .title {
-    display: flex;
 }
 
 /* create to do input*/
 
 #content {
     display: block;
-    width: 50%;
+    width: 100%;
     font-size: 1.125rem;
     padding: 1rem 1.5rem ;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
+    border: double black 4px;
 
 }
 
 #due-date{
     border-radius: 6px;
+    border: double black 4px;
+    background-color: rgb(209, 134, 247);
+
 }
 
 /* option */
@@ -58,6 +56,7 @@ h4{
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     margin-bottom: 1.5rem;
+    font-size: larger;
 }
 
 #option-label {
@@ -66,8 +65,9 @@ h4{
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    background-color: rgb(208, 233, 255);
+    /*background-color: rgb(255, 255, 255);*/
     border-radius:0.5rem ;
+    border: double black 4px;
     cursor: pointer;
 }
 
@@ -82,7 +82,7 @@ input[type="radio"],input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid rgb(255, 125, 125);
+    border: 2px solid rgb(255, 90, 117);
 }
 
 .bubble-personal{
@@ -92,7 +92,7 @@ input[type="radio"],input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid rgb(6, 50, 77);
+    border: 2px solid rgb(29, 168, 255);
 }
  
 .bubble-work::after {
@@ -112,7 +112,7 @@ input[type="radio"],input[type="checkbox"] {
     opacity: 0;
     width: 0px;
     height: 0px;
-    background-color: rgb(64, 139, 169);
+    background-color: rgb(5, 66, 90);
     border-radius: 50%;
     transition: 0.2s ease-in-out;   
 }
@@ -122,6 +122,8 @@ input:checked ~ .bubble-work::after {
     height: 10px;
     opacity: 1;
 }
+ 
+/* to do submit*/
 
 .create-todo input[type=submit] {
     display: block;
@@ -129,8 +131,9 @@ input:checked ~ .bubble-work::after {
     font-size: 1.125rem;
     padding: 1rem 1.5rem;
     color: rgb(0, 0, 0);
-    background-color: antiquewhite;
+    background-color: rgb(209, 134, 247);
     border-radius: 0.5rem;
+    border: double black 4px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
@@ -139,6 +142,7 @@ input:checked ~ .bubble-work::after {
     opacity: 0.75;
 }
 
+/*To do Item*/
 .todo-list .list {
     margin: 1rem 0;
 }
@@ -146,9 +150,9 @@ input:checked ~ .bubble-work::after {
 .todo-list .todo-item{
     display: flex;
     align-items: center;
-    background-color: white;
     padding: 1rem;
     border-radius: 0.5rem;
+    border: double black 4px;
     margin-bottom: 1rem;
 }
 
@@ -163,14 +167,19 @@ input:checked ~ .bubble-work::after {
 }
 
 .todo-item .todo-content input {
-    color: grey;
+    color: black;
     font-size: 1.125rem;
+    background: pink;
+    border: double black 4px;
+    border-radius: 0.25rem;
 }
 
 .todo-item .actions{
     display: flex;
     align-items: center;
 }
+
+/*buttons*/
 
 .todo-item .actions button {
     display: block;
@@ -187,13 +196,13 @@ input:checked ~ .bubble-work::after {
 
 .todo-item .actions .edit {
     margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    border: double black 4px;
     background-color: cadetblue;
 }
 
 .todo-item .actions .delete {
-    background-color: maroon;
+    background-color: rgb(128, 0, 96);
+    border-radius: 0.25rem;
+    border: double black 4px;
 }
-
-
-
-

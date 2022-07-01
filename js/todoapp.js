@@ -1,29 +1,28 @@
 window.addEventListener('load', () => {
-    todo = JSON.parse(localStorage.getItem('todo')) || [];
+    const todos = JSON.parse(localStorage.getItem('todos')) || [];
     const newTodoForm = document.querySelector('#new-todo-form');
 
     newTodoForm.addEventListener('submit', e => {
-        e.preventDefault();
+        e.preventDefault(); // prevent form from submitting 
 
         const todo = {
             content: e.target.elements.content.value,
             category: e.target.elements.category.value,
-            done: false,
-            createdAt: new Date().getTime()
+            createdAt: new Date()
         }
 
-        todos.push(todo)
+        todos.push(todo);
 
         localStorage.setItem('todos', JSON.stringify(todos));
 
-        e.target.reset();
+        e.target.reset(); //reset input
 
-        DisplayTodos();
     })
 })
 
+//display todo's
 function DisplayTodos() {
-    const todoList = document.querySelector('#todo-list');
+    const todoList = document.querySelector('.list');
 
     todoList.innerHTML = '';
 
@@ -35,7 +34,7 @@ function DisplayTodos() {
         const input = document.createElement('input');
         const span = document.createElement('span');
         const content = document.createElement('div');
-        const action = document.createElement('div');
+        const actions = document.createElement('div');
         const edit = document.createElement('button');
         const deleteButton = document.createElement('button');
 
@@ -56,7 +55,7 @@ function DisplayTodos() {
 
         content.innerHTML = '<input type="text" value="${todo.content}" readonly>';
         edit.innerhtml = 'Edit';
-        deleteButtoninnerhtml = 'Delete';
+        deleteButton.innerhtml = 'Delete';
 
         label.appendChild(input);
         label.appendChild(span);
@@ -103,5 +102,6 @@ function DisplayTodos() {
             DisplayTodos();
         })
     })
+
 }
 
