@@ -44,7 +44,7 @@ function DisplayTodos() {
 
         if (todo.category == 'personal') {
             span.classList.add('personal');
-        } else {
+        }else {
             span.classList.add('work');
         }
 
@@ -65,7 +65,7 @@ function DisplayTodos() {
         todoItem.appendChild(content);
         todoItem.appendChild(actions);
 
-        todoList.append(todoItem);
+        todoList.appendChild(todoItem);
 
         if (todo.done) {
             todoItem.classList.add('done');
