@@ -7,8 +7,10 @@ window.addEventListener('load', () => {
 
         const todo = {
             content: e.target.elements.content.value,
+            due_date: e.target.elements.due_date.value,
             category: e.target.elements.category.value,
-            createdAt: new Date()
+
+            
         }
 
         todos.push(todo);
@@ -19,6 +21,24 @@ window.addEventListener('load', () => {
 
     })
 })
+
+//onclick button
+
+function addToDo(){
+
+    let item = document.createElement('li');
+    let userinput = document.getElementById("content");
+
+    let textnode = document.createTextNode(userinput);
+
+    item.appendChild(textnode);
+
+    if(userinput === " "){
+        alert("Please add To Do ")
+    }else{
+        document.getElementById("todolist").appendChild(item)
+    }
+}
 
 //display todo's
 function DisplayTodos() {
@@ -101,6 +121,7 @@ function DisplayTodos() {
             localStorage.setItem('todos', JSON.stringify(todos));
             DisplayTodos();
         })
+        
     })
 
 }
