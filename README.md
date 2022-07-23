@@ -1,1 +1,2 @@
 # todoapp
+Create your own To Do list by adding in a To Do, by selection the due date and if this ToDo is work related or personal. Once all that is done you can add it to your list. It will also be in your local storage, so if you go out of the site and come back your to do will still be there.
