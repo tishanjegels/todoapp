@@ -22,11 +22,11 @@
 
     <main class="app">
 
-
+        <header>
+            <h3>Create a To Do</h3>
+        </header>
 
         <section class="create-todo">
-
-            <h3>Create a To Do</h3>
 
             <form id="new-todo-form">
 
@@ -34,20 +34,21 @@
                 <input type="text" name="content" id="content" placeholder="e.g. Make supper" />
 
                 <h4>Add Due Date</h4>
-                <input type="date" id="due-date" name="due_date" placeholder="required" style="width: 150px;" required/>
-                
+                <input type="date" id="due-date" name="due_date" placeholder="required" style="width: 150px;"
+                    required />
+
                 <!--categorys of to do-->
-                
+
                 <h4>Pick a category</h4>
                 <div class="options">
 
-                    <label id="option-label">
+                    <label id="option-label1">
                         <input type="radio" name="category" id="work" value="work" />
                         <span class="bubble-work"></span>
                         <div>Work</div>
                     </label>
 
-                    <label id="option-label">
+                    <label id="option-label2">
                         <input type="radio" name="category" id="personal" value="personal" />
                         <span class="bubble-personal"></span>
                         <div>Personal</div>
